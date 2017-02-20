@@ -1,0 +1,17 @@
+The cicle radius is: 5.0
+The length of the circle is: 31.42
+The square of the circle is: 78.54
+
+The cicle radius is: 12.0
+The length of the circle is: 75.40
+The square of the circle is: 452.39
+
+The cicle radius is: 6.7
+The length of the circle is: 42.10
+The square of the circle is: 141.03
+
+The cicle radius is: 8.3
+The length of the circle is: 52.15
+The square of the circle is: 216.42
+
+

@@ -1,0 +1,13 @@
+The number is: 1234
+The multiplication of the digits: 24
+
+The number is: -5678
+The multiplication of the digits: 1680
+
+The number is: 3456
+The multiplication of the digits: 360
+
+The number is: 4567
+The multiplication of the digits: 840
+
+
