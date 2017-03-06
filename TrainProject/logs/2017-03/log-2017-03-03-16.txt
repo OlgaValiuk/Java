@@ -1,0 +1,8 @@
+16:34:34  ERROR  - Invalid id/year/seat taken value of a passenger car: 5 1981 2 COUPE 80 160
+16:34:34  ERROR  - Invalid id/year/seat taken value of a passenger car: 7 2678 2 COUPE 30 15
+16:34:34  ERROR  - Invalid passenger car style: 4 1981 2 UNDERFINEDCAR 80 72
+16:34:34  ERROR  - Invalid id/year/seat taken value of a passenger car: 2 1995 2 GENERAL 60 46
+16:34:34  ERROR  - Invalid id/year/bag taken value of a baggage car: 12 2020 1 10 8
+16:34:34  ERROR  - Invalid id/year/bag taken value of a baggage car: 10 1982 1 220 200
+16:34:34  ERROR  - Invalid id/year/bag taken value of a baggage car: 11 1997 1 200 350
+16:34:34  ERROR  - Invalid passenger car style: gjhg
