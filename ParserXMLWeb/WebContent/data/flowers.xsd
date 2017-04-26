@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="flowers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="flower"
+					type="Flower"
+					minOccurs="1"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Flower">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="origin" type="xs:string" />
+			<xs:element name="visual" type="Visual" />
+			<xs:element name="growing" type="Growing" />
+		</xs:sequence>
+		<xs:attribute name="item" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:ID">    
+					<xs:pattern value="[a-z A-Z]{1,}(-){1}[0-9]{1,}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="soil" use="optional" default="turf">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="turf"></xs:enumeration>
+					<xs:enumeration value="sod"></xs:enumeration>
+					<xs:enumeration value="bark"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="multiplying" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="leaf"></xs:enumeration>
+					<xs:enumeration value="stalk"></xs:enumeration>
+					<xs:enumeration value="seed"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Visual">
+		<xs:sequence>
+			<xs:element name="stalkColour" type="xs:string" />
+			<xs:element name="leafColour" type="xs:string" />
+			<xs:element name="avgSizeMeters" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Growing">
+		<xs:sequence>
+			<xs:element name="temperature">
+				<xs:simpleType>
+					<xs:restriction base="xs:double">
+						<xs:minInclusive value="15" />
+						<xs:maxInclusive value="35" />
+					</xs:restriction>
+				</xs:simpleType>
+			 </xs:element>
+			<xs:element name="lighting" type="Lighting" />
+			<xs:element name="waterMLWeek" type="xs:positiveInteger" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Lighting">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="photophilous"></xs:enumeration>
+			<xs:enumeration value="sciophilous"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
